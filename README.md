@@ -18,6 +18,7 @@ TODOs:
 
 TOREADS:
 - https://docs.lix.systems/manual/lix/stable/ (Nix but rust & better?)
+- zram
 
 "Inspired" by:
 - https://github.com/ryan4yin/nix-config/tree/main
