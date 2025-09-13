@@ -8,8 +8,14 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./common/toolbox.nix
-    ];
+ ];
+
+  # home-manager
+  home-manager.nixosModules.home-manager = {
+	home-manager.useGlobalPkgs = true;
+	home-manager.useUserPackages = true;
+	home-manager.users.luffy.imports = ./home/home.nix;
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -101,11 +107,9 @@
     tmux
   #  wget
   ];
-  systemd.targets.sleep.enable = false;
-  systemd.targets.suspend.enable = false;
-  systemd.targets.hibernate.enable = false;
-  systemd.targets.hybrid-sleep.enable = false;
-  # Some programs need SUID wrappers, can be configured further or are
+  
+
+# Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
