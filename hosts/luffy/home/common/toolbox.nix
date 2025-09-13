@@ -1,6 +1,17 @@
 { pkgs, ... }:
-
+let
+    shellAliases = {
+#	l = "eza -l";
+#	la = "eza -la";
+    };
+in
 {
+
+  # custom shell aliases for these packages
+  programs.bash.enable = true;
+  programs.bash.shellAliases = shellAliases;
+
+
   home.packages = with pkgs; [
 	# important
 	cowsay
@@ -27,14 +38,12 @@
 	# disk mgmnt
 	duf # Disk Usage / Free Utility. (df)
 	du-dust # Disk Usage (du)
-	
-	 
+
 	# nix
 	nix-output-monitor # `nom` - nix with better logs
 	nix-index # index nix store paths
 	nix-melt # tui flake.lock
 	nix-tree # tue nix dep tree
-
   ];
 
 

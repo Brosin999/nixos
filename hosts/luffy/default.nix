@@ -8,14 +8,14 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
- ];
+      ./modules/font.nix
+    ];
 
   # home-manager
-  home-manager.nixosModules.home-manager = {
 	home-manager.useGlobalPkgs = true;
 	home-manager.useUserPackages = true;
-	home-manager.users.luffy.imports = ./home/home.nix;
-  };
+	home-manager.users.luffy.imports = [./home/home.nix];
+
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

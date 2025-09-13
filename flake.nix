@@ -15,7 +15,7 @@
 	};
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
       karoo = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
@@ -31,6 +31,7 @@
 	system = "x86_64-linux";
         modules = [
 		./hosts/luffy
+		home-manager.nixosModules.home-manager
 	 ];
 	};
     };
