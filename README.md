@@ -16,5 +16,8 @@ TODOs:
 [ ] secure boot
 [ ] certs
 
+TOREADS:
+- https://docs.lix.systems/manual/lix/stable/ (Nix but rust & better?)
+
 "Inspired" by:
 - https://github.com/ryan4yin/nix-config/tree/main

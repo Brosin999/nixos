@@ -8,13 +8,13 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/font.nix
+     ./modules
     ];
 
   # home-manager
-	home-manager.useGlobalPkgs = true;
-	home-manager.useUserPackages = true;
-	home-manager.users.luffy.imports = [./home/home.nix];
+  home-manager.users.luffy.imports = [./home/home.nix];
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
 
 
   # Bootloader.

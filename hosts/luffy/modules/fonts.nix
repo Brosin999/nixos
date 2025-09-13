@@ -1,7 +1,7 @@
-{ pkgs, config, lib, ... }
+{ pkgs, config, lib, ... }:
 
 {
-  config.fonts.packages = [
+  config.fonts.packages = with pkgs; [
       # icon fonts
       material-design-icons
       font-awesome
