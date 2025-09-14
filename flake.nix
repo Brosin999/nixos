@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    #nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
    
     home-manager = {
 	 url = "github:nix-community/home-manager/master";
@@ -27,8 +28,13 @@
 		./hosts/karoo
 	];
       };
-      luffy = nixpkgs.lib.nixosSystem {
+
+      luffy = nixpkgs.lib.nixosSystem {	
 	system = "x86_64-linux";
+	specialArgs = {
+		# quick hack to make external editor work
+		pkgs-unstable = nixpkgs.legacyPackages."x86_64-linux";
+	};
         modules = [
 		./hosts/luffy
 		home-manager.nixosModules.home-manager

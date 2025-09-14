@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 
 {
   imports =
@@ -15,7 +15,7 @@
   home-manager.users.luffy.imports = [./home/home.nix];
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-
+  home-manager.extraSpecialArgs.pkgs-unstable = pkgs-unstable;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
