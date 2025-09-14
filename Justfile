@@ -13,4 +13,10 @@ up:
 fmt:
 	nix-shell -p nixfmt-rfc-style deadnix statix typos; nixfmt; deadnix; statix -c; typos; exit;
 
+[group('nix')]
+gc:
+	nix store gc
+
+
+
 

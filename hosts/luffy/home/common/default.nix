@@ -1,4 +1,4 @@
 { ... }:
 {
-	imports = [./toolbox.nix ./editors];
+	imports = [./toolbox.nix ./tui];
 }

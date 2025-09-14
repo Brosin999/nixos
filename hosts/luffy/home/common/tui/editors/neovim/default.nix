@@ -16,18 +16,22 @@ let
   };
   # the path to nvim directory
   # to make this symlink work, we need to git clone this repo to your home directory.
-  configPath = "${config.home.homeDirectory}/nixos/hosts/luffy/home/common/editors/neovim/nvim";
+  # TODO: Parameterise
+  configPath = "${config.home.homeDirectory}/nixos/hosts/luffy/home/common/tui/editors/neovim/nvim";
 in
 {
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink configPath;
   # Disable catppuccin to avoid conflict with my non-nix config.
 
   # vim dep
-  home.packages = with pkgs; [ lua ];
+  home.packages = with pkgs; [ 
+    lua 
+    gcc
+    gdb
+    ];
 
   home.shellAliases = shellAliases;
 #  programs.nushell.shellAliases = shellAliases;
-
 
 
   programs.neovim = {
