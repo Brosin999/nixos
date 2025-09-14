@@ -13,7 +13,6 @@ return {
   -- Highly experimental plugin that completely replaces
   -- the UI for messages, cmdline and the popupmenu.
   -- { import = "astrocommunity.utility.noice-nvim" },
-  { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.flit-nvim" },
   { import = "astrocommunity.scrolling.nvim-scrollbar" },

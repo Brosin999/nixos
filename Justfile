@@ -2,7 +2,7 @@ default:
 	@just --list
 
 [group('nix')]
-switch:
+sw:
 	sudo nixos-rebuild switch --flake .#
 
 [group('nix')]

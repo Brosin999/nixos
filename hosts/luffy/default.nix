@@ -12,11 +12,12 @@
     ];
 
   # home-manager
-  home-manager.users.luffy.imports = [./home/home.nix];
-  home-manager.useGlobalPkgs = true;
-  home-manager.useUserPackages = true;
-  home-manager.extraSpecialArgs.pkgs-unstable = pkgs-unstable;
-
+  home-manager = {
+    users.luffy.imports = [ ./home/home.nix ];
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs.pkgs-unstable = pkgs-unstable;
+  };
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

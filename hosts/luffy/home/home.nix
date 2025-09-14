@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-unstable, ... }:
+{ catppuccin, ... }:
 {
 	# home manager info	
 	home.username = "luffy";
