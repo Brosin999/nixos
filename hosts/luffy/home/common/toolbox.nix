@@ -29,7 +29,7 @@ in
 	yq-go # jq for {yaml, json, ini, xml}
 	just # command runner (like make)
 	hyperfine # benchmark commands
-	
+	claude-code # we'll see...
 
 	# networking
 	gping # ping with tui graph
