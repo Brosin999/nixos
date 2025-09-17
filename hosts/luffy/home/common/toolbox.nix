@@ -23,7 +23,8 @@ in
 	fzf # fuzzy search files
 	fd # find file by name (find)
         # search for files by its content, replacement of grep
-        (ripgrep.override { withPCRE2 = true; })	
+        (ripgrep.override { withPCRE2 = true; })
+	psmisc # provides killall command	
 	
 	sad # batch file edit
 	yq-go # jq for {yaml, json, ini, xml}
