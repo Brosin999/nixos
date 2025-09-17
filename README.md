@@ -6,8 +6,10 @@ TODOs:
 - [ ] dev env
 - [x] module library
 - [x] home library
-- [ ] tui *
-- [ ] gui
+- [x] tui
+- [x] gui
+- [ ] wayland config
+
 
 - [ ] declarative preservation
 - [ ] disko

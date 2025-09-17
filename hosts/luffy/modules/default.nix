@@ -5,5 +5,6 @@
 		./system-packages.nix
 		./nix.nix
 		./hyprland.nix
+		./nvidia.nix
 	];
 }
