@@ -39,12 +39,14 @@
     # Notification daemon
     mako = {
       enable = true;
-      backgroundColor = "#1e1e2e";
-      borderColor = "#89b4fa";
-      borderRadius = 10;
-      borderSize = 2;
-      textColor = "#cdd6f4";
-      defaultTimeout = 5000;
+      settings = {
+        background-color = "#1e1e2e";
+        border-color = "#89b4fa";
+        border-radius = 10;
+        border-size = 2;
+        text-color = "#cdd6f4";
+        default-timeout = 5000;
+      };
     };
   };
 
