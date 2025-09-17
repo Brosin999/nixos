@@ -3,6 +3,7 @@
 	imports = [
 		./fonts.nix
 		./system-packages.nix
-		./nix.nix			
+		./nix.nix
+		./hyprland.nix
 	];
 }

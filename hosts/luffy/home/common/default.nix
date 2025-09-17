@@ -1,4 +1,4 @@
 { ... }:
 {
-	imports = [./toolbox.nix ./tui ];
+	imports = [./toolbox.nix ./tui ./ssh.nix ];
 }
