@@ -1,5 +1,6 @@
 { ... }:
 {
+
   # System-level Hyprland enablement - minimal setup for NixOS
   programs.hyprland = {
     enable = true;
